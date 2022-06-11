@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.css","sourcesContent":[]}
+{"version":3,"sources":["main.scss","main.css"],"names":[],"mappings":"AACA,EACI,qBAAA,CAGA,6BAAA,CAFA,QAAA,CACA,SCCJ","file":"main.css","sourcesContent":["\r\n*{\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Roboto', sans-serif;\r\n}","* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: \"Roboto\", sans-serif;\n}"]}

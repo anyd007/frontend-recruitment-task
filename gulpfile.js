@@ -1,8 +1,9 @@
 const { src, dest, watch, series, parallel } = require('gulp');
 
 const sourcemaps = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require("sass"));
 const concat = require('gulp-concat');
+const browserSync = require("browser-sync").create()
 const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
@@ -21,6 +22,7 @@ function scssTask(){
         .pipe(sass([])) // compile SCSS to CSS
         .pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
         .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
+        .pipe(browserSync.stream())
         .pipe(dest('dist')
     ); // put final CSS in dist folder
 }
