@@ -1,0 +1,16 @@
+$screen-sizes: (
+  small: 480px,
+  medium: 720px,
+  large: 960px,
+  wide: 1200px
+);
+@mixin screen($name) {
+  @if not map-has-key($screen-sizes, $name) {
+    @warn "`#{$name}`...literówka.";
+  }
+  @else {
+    @media (max-width: map-get($screen-sizes, $name)) {
+      @content;
+    }
+  }
+}

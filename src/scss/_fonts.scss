@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'robotoBold';
+    src:  url("../../fonts/Roboto-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$name:'robotoRegular';
+$file:"../../fonts/Roboto-Regular.ttf";
+@mixin font-face($name, $file) {
+    @font-face {
+    font-family: "#{$name}";
+    src:url("../../fonts/Roboto-Regular.ttf") format('truetype');
+  }
+ }
+
