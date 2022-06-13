@@ -2,73 +2,118 @@
 @import "colors";
 @import "fonts";
 
+%backgroundCenter{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .hero{
+    position: relative;
     max-width: 90rem;
     height: 100vh;
+    overflow: hidden;
 
         &__conteiner{
             display: grid;
+            justify-items: stretch;
+            padding-left: 14.3rem;
+            padding-right: 14.3rem;
+            gap: 6rem;
             grid-template-columns: 1fr 1fr;
-            // column-gap: 5.9rem;
             height: 100%;
 
+            @include screen(extra-small,small){
+                padding-left: 0%;
+                padding-right: 0%;
+                grid-template-columns: 1fr;
+                height: 100%;
+            }
+
                 &--left{
-                    position: relative;
                     padding-top: 6rem;
-                }
 
-                &--img{
-                    position: absolute;
-                    display: flex;
-                    right: 0%;
-                    width: 31.6rem;
-                    height: 20.6rem;
-                    background-image: url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_4_3\,c_fill\,g_auto__c_scale\,w_538.jpg");
-                   
-                }
-
-                &--right{
-                    position: relative;
-                    left:  5.9rem;
-                     @include screen(wide){
-                        left: 3rem;
-                     }
-                }
-
-                &--title{
-                    position: absolute;
-                    height: 3.1rem;
-                    top: 8.5rem;
-                    h1{
-                        font-size: 2.6rem;
-                        line-height: 3.2rem;
-                        margin-bottom: 1.5rem;
+                    @include screen(extra-small, small){
+                        padding-top: 0%;
                     }
                 }
 
+                &--img{
+                    height: 34.375vh;
+                    width: 35.069vw;
+                    @extend %backgroundCenter;
+                    background-image: url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_4_3\,c_fill\,g_auto__c_scale\,w_538.jpg");
+
+                     @include screen(extra-small, small){
+                        background-image: image-set(url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_480.jpg"));
+                        width: 100vw;
+                        height: 100vh;
+                        @extend %backgroundCenter;
+                     }
+                }
+
+                &--right{
+                    padding-top: 8.5rem;
+
+                    @include screen(extra-small,small){
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-around;
+                        padding-top: 0%;
+                        height: 100vh;
+                        width: 100vw;
+                        text-align: center;
+                    }
+                }
+
+                &--title{
+                    height: 5vh;
+                    margin-bottom: 1.5rem;
+                    h1{
+                        font-size: 3rem;
+                        line-height: 3.2rem;
+                        @include screen(extra-small,small){
+                            font-size: 4rem;
+                        }
+                    }
+                    @include screen(extra-small,small){
+                        width: 100vw;
+                    }
+                }
 
                 &--paragraph{
-                    position: absolute;
-                    top: 13.1rem;
-                    width: 23.8rem;
                     height: 6rem;
+                    width: 26.389vw;
+                    margin-bottom: 2rem;
                      p{
                         line-height: 1.5rem;
-                        margin-bottom: 2rem;
                         font-size: 1rem;
+                        @include screen(extra-small,small){
+                            font-size: 2rem;
+                            line-height: 2.3rem;
+                        }
+                     }
+
+                     @include screen(extra-small,small){
+                        height: auto;
+                        width: 100vw;
                      }
                 }
 
                 &--btn{
-                    position: absolute;
                     cursor: pointer;
                     padding: 1rem 2.5rem;
                     border-radius: 32px;
-                    top: 21.1rem;
                     background-color: $button;
                     border: none;
                     color: $buttonFontColor;
+
+                    @include screen(extra-small,small){
+                        font-size: 2rem;
+                        background-color: $dark;
+                    }
                 }
                 
          }
