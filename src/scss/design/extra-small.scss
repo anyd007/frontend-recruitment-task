@@ -35,7 +35,7 @@
 
         &--title{
             h1{
-                font-size: 4rem;
+                font-size: 15vw
             }
             width: 100vw;
             
@@ -43,15 +43,15 @@
 
         &--paragraph{
             p{
-                font-size: 2rem;
-                line-height: 2.3rem;
+                font-size: 8vw;
+                line-height: 2rem;
             }
             height: auto;
             width: 100vw;
         }
 
         &--btn{
-            font-size: 2rem;
+            font-size: 8vw;
             background-color: $dark
         }
     }

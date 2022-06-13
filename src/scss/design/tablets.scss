@@ -1,0 +1,41 @@
+@import "../mediaQueries";
+
+
+
+.hero__conteiner{
+    @include screen(medium, large){
+      
+       display: none;
+ 
+ &--left, &--right{
+       
+    }
+
+ &--img{
+      
+    }
+
+ &--right{
+   
+ }
+
+ &--title{
+    order: 2;
+        h1{
+           
+        }
+ }
+
+
+ &--paragraph{
+   
+    p{
+        
+    }
+ }
+
+ &--btn{
+  
+ }
+}
+}
