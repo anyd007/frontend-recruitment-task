@@ -2,6 +2,7 @@
 @import "colors";
 @import "fonts";
 
+
 %backgroundCenter{
     background-position: center;
     background-repeat: no-repeat;
@@ -23,19 +24,8 @@
             grid-template-columns: 1fr 1fr;
             height: 100%;
 
-            @include screen(extra-small,small){
-                padding-left: 0%;
-                padding-right: 0%;
-                grid-template-columns: 1fr;
-                height: 100%;
-            }
-
                 &--left{
                     padding-top: 6rem;
-
-                    @include screen(extra-small, small){
-                        padding-top: 0%;
-                    }
                 }
 
                 &--img{
@@ -43,29 +33,10 @@
                     width: 35.069vw;
                     @extend %backgroundCenter;
                     background-image: url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_4_3\,c_fill\,g_auto__c_scale\,w_538.jpg");
-
-                     @include screen(extra-small, small){
-                        background-image: image-set(url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_480.jpg"));
-                        width: 100vw;
-                        height: 100vh;
-                        @extend %backgroundCenter;
-                     }
                 }
 
                 &--right{
                     padding-top: 8.5rem;
-
-                    @include screen(extra-small,small){
-                        position: absolute;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: space-around;
-                        padding-top: 0%;
-                        height: 100vh;
-                        width: 100vw;
-                        text-align: center;
-                    }
                 }
 
                 &--title{
@@ -74,12 +45,6 @@
                     h1{
                         font-size: 3rem;
                         line-height: 3.2rem;
-                        @include screen(extra-small,small){
-                            font-size: 4rem;
-                        }
-                    }
-                    @include screen(extra-small,small){
-                        width: 100vw;
                     }
                 }
 
@@ -90,15 +55,6 @@
                      p{
                         line-height: 1.5rem;
                         font-size: 1rem;
-                        @include screen(extra-small,small){
-                            font-size: 2rem;
-                            line-height: 2.3rem;
-                        }
-                     }
-
-                     @include screen(extra-small,small){
-                        height: auto;
-                        width: 100vw;
                      }
                 }
 
@@ -109,11 +65,6 @@
                     background-color: $button;
                     border: none;
                     color: $buttonFontColor;
-
-                    @include screen(extra-small,small){
-                        font-size: 2rem;
-                        background-color: $dark;
-                    }
                 }
                 
          }

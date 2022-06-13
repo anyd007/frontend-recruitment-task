@@ -1,0 +1,61 @@
+@import "../mediaQueries";
+
+
+
+.hero__conteiner{
+    @include screen(small, medium){
+        padding-left: 0%;
+        padding-right: 0%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 1fr;
+        gap: 0;
+        height: 100%;
+       
+ 
+ &--left, &--right{
+        padding-top: 0%;
+    }
+
+ &--img{
+        width: 100vw;
+        background-image: image-set(url("../../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_784.jpg"));
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:95%;
+    }
+
+ &--right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+ }
+
+ &--title{
+    order: 2;
+        h1{
+            font-size: 4.3rem;
+        }
+ }
+
+
+ &--paragraph{
+    text-align: center;
+    width: 98vw;
+    height: auto;
+    order: 3;
+    p{
+        font-size: 1.7rem;
+        line-height: 2rem;
+    }
+ }
+
+ &--btn{
+    order: 1;
+    width: 70vw;
+    font-size: 2.2rem;
+    margin-top: -10%
+ }
+}
+}

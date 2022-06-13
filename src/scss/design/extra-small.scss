@@ -1,0 +1,58 @@
+@import "../mediaQueries";
+@import "../colors";
+
+.hero__conteiner{
+    @include screen(extra-small, small){
+        padding-left: 0%;
+        padding-right: 0%;
+        grid-template-columns: 1fr;
+        height: 100%;
+
+        &--left{
+            padding-top: 0%;
+        }
+
+        &--img{
+            background-image: image-set(url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_480.jpg"));
+            width: 100vw;
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &--right{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            padding-top: 0%;
+            height: 100vh;
+            width: 100vw;
+            text-align: center;
+        }
+
+        &--title{
+            h1{
+                font-size: 4rem;
+            }
+            width: 100vw;
+            
+        }
+
+        &--paragraph{
+            p{
+                font-size: 2rem;
+                line-height: 2.3rem;
+            }
+            height: auto;
+            width: 100vw;
+        }
+
+        &--btn{
+            font-size: 2rem;
+            background-color: $dark
+        }
+    }
+}
