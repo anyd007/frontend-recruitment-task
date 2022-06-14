@@ -1,0 +1,49 @@
+@import "./colors";
+
+.background{
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    background-color: $fontColor;
+    opacity: 0.5;
+}
+.hide{
+    display: none;
+}
+
+.hero{
+&__popup{
+    position: fixed;
+    width: 57.5rem;
+    height: 13.1rem;
+    background-color: $background;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &--alert{
+        font-size: 2.5rem;
+        position: absolute;
+        left: calc(50% - 380px/2 - 175px);
+        top: calc(50% - 50px/2 - 24px);
+    }
+
+    &--alertInfo{
+        font-size: 1rem;
+        position: absolute;
+        left: calc(50% - 380px/2 - 175px);
+        top: calc(50% - 24px/2 + 37px);
+    }
+
+    &--icon{
+        position: absolute;
+        right: 4%;
+        top: 25%;
+        cursor: pointer;
+    }
+}
+}

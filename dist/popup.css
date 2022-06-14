@@ -1,0 +1,2 @@
+.background{background-color:#121212;height:100vh;left:0;opacity:.5;position:fixed;top:0;width:100vw;z-index:2}.hide{display:none}.hero__popup{background-color:#fff;height:13.1rem;left:50%;position:fixed;top:50%;transform:translate(-50%,-50%);width:57.5rem;z-index:3}.hero__popup--alert{font-size:2.5rem;left:calc(50% - 365px);position:absolute;top:calc(50% - 49px)}.hero__popup--alertInfo{font-size:1rem;left:calc(50% - 365px);position:absolute;top:calc(50% + 25px)}.hero__popup--icon{cursor:pointer;position:absolute;right:4%;top:25%}
+/*# sourceMappingURL=popup.css.map */

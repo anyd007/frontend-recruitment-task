@@ -1,0 +1,51 @@
+@import "../mediaQueries";
+
+.hero__popup{
+
+    @include screen(extra-small, small){
+        width: calc(100% - 40px * 2);
+
+        &--alert{
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: 2rem;
+        }
+
+        &--alertInfo{
+            // font-size: 1.5rem;
+            top: 55%;
+            left: 10%;
+        }
+
+        &--icon{
+            left: 50%;
+            top: 10%;
+            font-size: 25px;
+        }
+    }
+
+    @include screen(small, medium){
+        width: calc(100% - 50px * 2);
+
+        &--alert{
+            left: 10%;
+        }
+        &--alertInfo{
+            left: 10%;
+            font-size: 1.5rem;
+        }
+    }
+
+    @include screen(medium, large){
+        width: calc(100% - 50px * 2);
+        &--alert{
+            left: 10%;
+        }
+
+        &--alertInfo{
+            font-size: 1.5rem;
+            left: 10%;
+        }
+    }
+}
