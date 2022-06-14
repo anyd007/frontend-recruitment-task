@@ -1,0 +1,36 @@
+@import "../mediaQueries";
+
+.hero__conteiner{
+    @include screen(large, wide){
+        padding-left: 3%;
+        padding-right: 0%;
+        justify-content: center;
+        gap: 2rem;
+ 
+ &--left, &--right{
+    
+   }
+
+ &--img{
+       width: 100%;
+    }
+
+ &--right{
+    padding-top: 5.8rem;
+      text-align: center;
+ }
+
+ &--title{
+    
+ }
+
+
+ &--paragraph{
+        width: 95%;
+ }
+
+ &--btn{
+ 
+ }
+}
+}

@@ -18,7 +18,7 @@
 
  &--img{
         width: 100vw;
-        background-image: image-set(url("../../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_784.jpg"));
+        background-image: url("../../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -48,7 +48,7 @@
     height: auto;
     order: 3;
     p{
-        font-size: 2vw;
+        font-size: 2.2vw;
         line-height: 6vh;
     }
  }

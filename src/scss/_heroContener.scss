@@ -6,7 +6,7 @@
 %backgroundCenter{
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 .hero{
@@ -32,7 +32,7 @@
                     height: 34.375vh;
                     width: 35.069vw;
                     @extend %backgroundCenter;
-                    background-image: url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_4_3\,c_fill\,g_auto__c_scale\,w_538.jpg");
+                    background-image: url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg");
                 }
 
                 &--right{
