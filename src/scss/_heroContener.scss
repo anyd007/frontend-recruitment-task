@@ -66,6 +66,20 @@
                     border: none;
                     color: $buttonFontColor;
                 }
+
+                #resetPopupBtn{
+                    animation-name: openResetBtn;
+                    animation-duration: 1.5s;
+
+                }
+                @keyframes openResetBtn {
+                    from{
+                        opacity: 0;
+                    }
+                    to{
+                        opacity: 1;
+                    }
+                }
                 
          }
 

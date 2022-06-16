@@ -12,6 +12,13 @@
 }
 .hide{
     display: none;
+  }
+
+.reset{
+    display: none;
+}
+.bold{
+    font-weight: bold;
 }
 
 .hero{
@@ -24,6 +31,16 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    animation-name: showPopup;
+    animation-duration: 1s;
+    @keyframes showPopup {
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    }
 
     &--alert{
         font-size: 2.5rem;

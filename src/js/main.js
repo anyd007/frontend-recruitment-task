@@ -1,26 +1,53 @@
-const openPopupBtn = document.querySelector(".hero__conteiner--btn");
+import "./darkMode.js"
+
 const popupView = document.querySelector(".hide");
 const counterInfo = document.querySelector(".hero__popup--alertInfo");
-let count = localStorage.getItem("counter") || 0
+const resetBtn = document.querySelector("#resetPopupBtn");
+
+let count = localStorage.getItem("counter") || 0;
+let btnReset = localStorage.getItem("btnReset", "reseter") || "show"
 
 const openPopup = (e) => {
-  if (e.target.matches(".hero__conteiner--btn")) {
-    count++
-    localStorage.setItem("counter", count)
-    let view = localStorage.getItem("counter")
+  if (e.target.matches("#openPopupBtn")) {
+    count++;
     popupView.classList.remove("hide");
-    counterInfo.textContent = `You have clicked ${view} times to related button.`;
-  }
+    counterInfo.textContent = `You have clicked ${count} times to related button.`;
+    count >= 6 ? btnReset = "show" : btnReset = "reseter"
+  
+    if(btnReset === "show"){
+      btnReset = "reseter"
+      resetBtn.classList.remove("reset");
+    }
+    else{
+      btnReset = "show"
+      resetBtn.classList.add("reset");
+    }
+}
+      localStorage.setItem("btnReset", btnReset);
+      localStorage.setItem("counter", count);
+}
+if(btnReset === "reseter"){
+  resetBtn.classList.remove("reset")
 };
 
 const closePopup = (e) => {
-  if (
-    e.target.matches(".hero__popup--icon") ||
-    e.target.matches(".background")
-  ) {
+  if (e.target.matches(".hero__popup--icon") || e.target.matches(".background")){
     popupView.classList.add("hide");
+
   }
+};
+
+const resetPopup = e =>{
+          if(e.target.matches("#resetPopupBtn")){
+            localStorage.removeItem("counter");
+            localStorage.removeItem("btnReset")
+            count = 0;
+            btnReset = "show"
+            resetBtn.classList.add("reset")
+            alert("Your counter was restated");
+          }
 };
 
 document.addEventListener("click", openPopup);
 document.addEventListener("click", closePopup);
+document.addEventListener("click", resetPopup);
